@@ -13,9 +13,9 @@ namespace Exam_OOP_C_Basics
         public string Body { get; set; }
         public double Mark { get; set; }
         public Answer[] ListOfAnswer { get; set; }
-        public Answer RightAnswer { get; set; }
+        public Answer? RightAnswer { get; set; }
 
-        public Answer UserAnswer { get; set; }
+        public Answer? UserAnswer { get; set; }
 
         #endregion
 

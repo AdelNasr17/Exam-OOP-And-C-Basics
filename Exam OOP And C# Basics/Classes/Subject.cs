@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Exam_OOP_C_Basics
 {
-    internal class Subject 
+    internal class Subject
     {
 
         #region 1-Properties
@@ -29,13 +31,15 @@ namespace Exam_OOP_C_Basics
         #region 3- Methods
         public void CreateExam(BaseExam exam)
         {
-           if (exam== null)
+            if (exam == null)
             {
                 Console.WriteLine("Can Not Create exam");
                 return;
             }
             Exam = exam;
         }
+
+
 
         public void ShowSubject()
         {
@@ -44,6 +48,7 @@ namespace Exam_OOP_C_Basics
             Console.WriteLine("==================================================================");
             Exam.ShowExam();
         } 
+
         #endregion
 
     }

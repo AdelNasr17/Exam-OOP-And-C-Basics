@@ -41,17 +41,19 @@ namespace Exam_OOP_C_Basics
         // Definition Of A Method To Add A Question To The Exam If Is Allowed And There Is Space For It In The List Of Question Array .
         public void AddQuestion(BaseQuestion question)
         {
-            if(question == null)
-            {
-                Console.WriteLine("Can not  add a  question");
+            if(question != null)
+            {             
+                if (IsQuestionType(question) == true && TrackAddIndex < NumberOfQuestion)
+                {
+                    ListOfQuestion[TrackAddIndex] = question;
+                    TrackAddIndex++;
+                }
+                else
+                    Console.WriteLine("This Question Type Is Not Allowed For This Exam Or Cannot Add Question ");
             }
-            if (IsQuestionType(question) == true && TrackAddIndex < NumberOfQuestion)
-            {
-                ListOfQuestion[TrackAddIndex] = question;
-                TrackAddIndex++;
-            }
-            else 
-                Console.WriteLine("This Question Type Is Not Allowed For This Exam Or Cannot Add Question ");
+            else
+            Console.WriteLine("Can not  add a  question");
+
         }
 
         // Definition Of A Method  To Display The Exam Result After Completion
